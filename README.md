@@ -1,2 +1,3 @@
 # algoJS
-Training
+
+Several training files for the algorithm on javascript
