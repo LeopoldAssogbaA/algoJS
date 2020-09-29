@@ -88,3 +88,31 @@ console.log('-------------------------------');
 console.log('result: ', result);
 console.log('-------------------------------');
 
+// Alternante 
+// _     _  _     _  _  _  _  _ 
+//| |  | _| _||_||_ |_   ||_||_|
+//|_|  ||_  _|  | _||_|  ||_| _|
+
+let lines = [...Array(3)].map(readline)
+numbers = {
+    ' _ | ||_|': 0,
+    '     |  |': 1,
+    ' _  _||_ ': 2,
+    ' _  _| _|': 3,
+    '   |_|  |': 4,
+    ' _ |_  _|': 5,
+    ' _ |_ |_|': 6,
+    ' _   |  |': 7,
+    ' _ |_||_|': 8,
+    ' _ |_| _|': 9
+},
+output = ''
+
+for(let i=0; i<lines[0].length; i+=3) {
+let current = ''
+for(let j=0; j<3; j++) {
+    current += lines[j].slice(i, i+3)
+}
+output += numbers[current]
+}
+console.log(output)
